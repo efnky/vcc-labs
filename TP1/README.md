@@ -29,4 +29,5 @@ Il sont adapter au déploiement d'application dans le Cloud étant donnée que s
 Il est bien plus simple et rapide de créé beaucooup de conteneur grace à un dockerfile, cela permet aussi de diminuer les erreur humaine. Cela permet de mettre en place une automatisation du déploiement et la possibilité de partager le conteneur très facilement en échangeant uniquement le dockerfile (possibilité de créer exactement le même coonteneur)
 
 - Différence entre une image Docker et un conteneur Docker:
+L'image c'est le modèle reproductible de l'environnement, celle-ci contient l'environnement d'excécution de base et les dépendance, mais ne contient pas l'application. Le conteneur quand à lui, est l'appplication en exécution dans cette environnement.
 
