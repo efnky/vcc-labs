@@ -31,3 +31,14 @@ Il est bien plus simple et rapide de créé beaucooup de conteneur grace à un d
 - Différence entre une image Docker et un conteneur Docker:
 L'image c'est le modèle reproductible de l'environnement, celle-ci contient l'environnement d'excécution de base et les dépendance, mais ne contient pas l'application. Le conteneur quand à lui, est l'appplication en exécution dans cette environnement.
 
+# Etape 4
+
+- Pourquoi Docker Compose est préférable au lancement manuel de plusieurs conteneurs ?
+Docker compose est préférable étant donnée que celui-ci permet d'automatiser le lancement de plusieurs conteneur, permet de faire en sorte de lancé des centaine de conteneur en 1 fois sans avoir à tapper des centaine de commande pour les lancé un par un (mannuellement). Il permet également de pouvoir lier tous les conteneur dans un seul et même réseau et de les retirer de la liste des conteneur.
+
+- Quel est le rôle du fichier "docker-compose.yml" ?
+Ce fichier sert à donnée comme information à docker composer quel sont les différent service composant l'application ainsi que leur localisation, permettant à celui-ci de les trouver et de pouvoir lire leur dockerfile afin de pouvoir créer les conteneur et les lancé. Il permet également de spécifier sur quel port d'entré lancé les conteneurs et les redirection à effectuer, afin par exemple de pouvoir intéragir avec ceux-ci depuis la machine.
+
+- Dans quels cas Docker compose pourrait-il ses limites ?
+Une limite de Docker compose est que celui-ci s'exécute sur une seul machine, ainsi si celui-ci tombe en panne ou que la machine qui le maintient tombe en panne, tous les conteneur de celui-ci seront affecter. L'application entière pourrait cessez de fonctionner. (Il est impossible de répartir les conteneur sur différent serveur et de tous les lancé avec le même docker compose.)
+
